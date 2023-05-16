@@ -1,0 +1,104 @@
+Các thuật toán AND, OR và XOR là các phép toán logic cơ bản được sử dụng trong lĩnh vực xử lý logic và các hệ thống điều khiển. Dưới đây là mô tả của từng thuật toán:
+
+Thuật toán AND (và):
+
+Mô tả: Kết quả của phép toán AND giữa hai giá trị là True (đúng) nếu cả hai giá trị đều True. Trong trường hợp còn lại, kết quả là False (sai).
+
+Bảng chân trị:
+
+Giá trị A	Giá trị B	Kết quả
+True	True	True
+True	False	False
+False	True	False
+False	False	False
+Thuật toán OR (hoặc):
+
+Mô tả: Kết quả của phép toán OR giữa hai giá trị là True nếu ít nhất một trong hai giá trị là True. Chỉ khi cả hai giá trị đều là False, kết quả mới là False.
+
+Bảng chân trị:
+
+Giá trị A	Giá trị B	Kết quả
+True	True	True
+True	False	True
+False	True	True
+False	False	False
+Thuật toán XOR (hoặc loại trừ):
+
+Mô tả: Kết quả của phép toán XOR giữa hai giá trị là True khi hai giá trị khác nhau (một True và một False). Nếu cả hai giá trị đều True hoặc cả hai giá trị đều False, kết quả là False.
+
+Bảng chân trị:
+
+Giá trị A	Giá trị B	Kết quả
+True	True	False
+True	False	True
+False	True	True
+False	False	False
+
+Thuật toán NOT (phủ định):
+Mô tả: Kết quả của phép toán NOT của một giá trị là True nếu giá trị ban đầu là False, và ngược lại.
+
+Bảng chân trị:
+
+Giá trị A	Kết quả
+True	False
+False	True
+
+-------------------------------------------------------------------------
+
+Thuật toán AND bit-wise (AND):
+Mô tả: Phép toán AND bit-wise thực hiện AND giữa từng cặp bit tương ứng trong hai chuỗi bit.
+
+Cú pháp: A AND B
+
+Ví dụ: Giả sử chúng ta có hai chuỗi bit A = 10101010 và B = 11001100. Thực hiện phép AND bit-wise giữa A và B, kết quả là C = A AND B = 10001000.
+
+Giải thích:
+Bit thứ nhất của A là 1 và bit thứ nhất của B là 1. AND giữa chúng là 1.
+Bit thứ hai của A là 0 và bit thứ hai của B là 1. AND giữa chúng là 0.
+Tiếp tục quá trình trên cho tới bit cuối cùng, ta thu được chuỗi C = 10001000.
+Ví dụ mã nguồn Python:
+
+A = 0b10101010  # Biểu diễn chuỗi bit A
+B = 0b11001100  # Biểu diễn chuỗi bit B
+C = A & B       # Phép toán AND bit-wise
+print(bin(C))   # In kết quả C
+
+
+huật toán OR bit-wise (OR):
+
+Mô tả: Phép toán OR bit-wise thực hiện OR giữa từng cặp bit tương ứng trong hai chuỗi bit.
+Cú pháp: A OR B
+Ví dụ: Giả sử chúng ta có hai chuỗi bit A = 10101010 và B = 11001100. Thực hiện phép OR bit-wise giữa A và B, kết quả là C = A OR B = 11101110.
+Giải thích:
+Bit thứ nhất của A là 1 và bit thứ nhất của B là 1. OR giữa chúng là 1.
+Bit thứ hai của A là 0 và bit thứ hai của B là 1. OR giữa chúng là 1.
+Tiếp tục quá trình trên cho tới bit cuối cùng, ta thu được chuỗi C = 11101110.
+Thuật toán XOR bit-wise (XOR):
+
+Mô tả: Phép toán XOR bit-wise thực hiện XOR giữa từng cặp bit tương ứng trong hai chuỗi bit.
+Cú pháp: A XOR B
+Ví dụ: Giả sử chúng ta có hai chuỗi bit A = 10101010 và B = 11001100. Thực hiện phép XOR bit-wise giữa A và B, kết quả là C = A XOR B = 01100110.
+Giải thích:
+Bit thứ nhất của A là 1 và bit thứ nhất của B là 1. XOR giữa chúng là 0.
+Bit thứ hai của A là 0 và bit thứ hai của B là 1. XOR giữa chúng là 1.
+Tiếp tục quá trình trên cho tới bit cuối cùng, ta thu được chuỗi C = 01100110.
+
+A = 0b10101010  # Biểu diễn chuỗi bit A
+B = 0b11001100  # Biểu diễn chuỗi bit B
+
+# Phép toán OR bit-wise
+C_or = A | B
+print(bin(C_or))  # In kết quả C_or
+
+# Phép toán XOR bit-wise
+C_xor = A ^ B
+print(bin(C_xor))  # In kết quả C_xor
+
+Thuật toán NOT bit-wise (NOT):
+Mô tả: Phép toán NOT bit-wise thực hiện đảo ngược giá trị của từng bit trong một chuỗi bit.
+Cú pháp: NOT A
+Ví dụ: Giả sử chúng ta có chuỗi bit A = 10101010. Thực hiện phép NOT bit-wise trên A, kết quả là B = NOT A = 01010101.
+Giải thích:
+Bit thứ nhất của A là 1. NOT bit-wise đảo ngược nó thành 0.
+Bit thứ hai của A là 0. NOT bit-wise đảo ngược nó thành 1.
+Tiếp tục quá trình trên cho tới bit cuối cùng, ta thu được chuỗi B = 01010101.
